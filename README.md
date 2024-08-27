@@ -2,7 +2,7 @@
 
 ![Screenshot](screenshot.png)
 
-Spectral analysis is commonly used to investigate time series data and identify features of interest such as dominant frequencies. This approach takes the uncertainty of the input data into account. While the transformations are included in the library UADAPy (https://github.com/UniStuttgart-VISUS/uadapy), this repository contains the visual analysis tool to support the whole analysis process.
+Spectral analysis is commonly used to investigate time series data and identify features of interest such as dominant frequencies. This approach takes the uncertainty of the input data into account. While the transformations will be included in the library UADAPy (https://github.com/UniStuttgart-VISUS/uadapy), this repository contains the visual analysis tool to support the whole analysis process.
 
 More information can be found in the paper "Uncertainty-aware Spectral Visualization" by Marina Evers and Daniel Weiskopf.
 
