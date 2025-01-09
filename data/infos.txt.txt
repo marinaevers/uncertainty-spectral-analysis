@@ -1,9 +1,0 @@
-Artificial data (13.3., 19:00)
-
-length = 500
-x = np.arange(length)*1/12
-f = 1
-testdata = np.sin(f*x)
-testdata[int(length/2):] = np.sin(3*x[int(length/2):])
-
-Covariance uses an exponential kernel with length 15 and variance 0.5

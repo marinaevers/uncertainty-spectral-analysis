@@ -17,7 +17,7 @@ The dependencies can be installed by
 ```
 pip install requirements.txt
 ```
-The code was tested on Windows.
+The code was tested on Windows using Python 3.9.
 
 ## How to Run?
 The visual analysis tool requires the mean and the covariance matrix of the time series. These files store numpy arrays. For metadata, it also needs a config file in json format. We included the artificial dataset from the paper for the approach to be ready to use. You can use the config file as a template.

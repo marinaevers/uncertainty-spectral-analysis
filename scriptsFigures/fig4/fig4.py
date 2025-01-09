@@ -1,0 +1,35 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+timeFourierMedian = np.load("fourierMedian.npy")
+timeFourierMean = np.load("fourierMean.npy")
+timeFourierTransform = np.load("fourierTransform.npy")
+timeWaveletMedian = np.load("waveletMedian.npy")
+timeWaveletMean = np.load("waveletMean.npy")
+timeWaveletTransform = np.load("waveletTransform.npy")
+
+plt.figure(figsize=(8,4))
+
+timesteps = np.linspace(200, 2000, 10)
+plt.plot(timesteps, timeFourierTransform, label="Fourier transform")
+plt.plot(timesteps, timeFourierMedian, label="Fourier spectrum median")
+plt.plot(timesteps, timeFourierMean, label="Fourier spectrum mean and variance")
+plt.xlabel("Number of time steps")
+plt.ylabel("Time [s]")
+plt.xlim(200,2000)
+plt.ylim(-0.3, 4)
+plt.legend(frameon=False)
+plt.savefig("//visus.uni-stuttgart.de/visusstore/home/eversma/Documents/Projects/uncertainty-spectral-analysis/Figures/Scalability/fourier.pdf")
+plt.show()
+plt.close()
+
+plt.figure(figsize=(8,4))
+plt.plot(timesteps, timeWaveletTransform, label="Wavelet transform")
+plt.plot(timesteps, timeWaveletMedian, label="Wavelet spectrum median")
+plt.plot(timesteps, timeWaveletMean, label="Wavelet spectrum mean and variance")
+plt.xlabel("Number of time steps")
+plt.ylabel("Time [s]")
+plt.legend(frameon=False)
+plt.xlim(200,2000)
+plt.savefig("//visus.uni-stuttgart.de/visusstore/home/eversma/Documents/Projects/uncertainty-spectral-analysis/Figures/Scalability/wavelet.pdf")
+plt.show()
