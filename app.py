@@ -239,4 +239,12 @@ app.layout = html.Div(
 )
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    # app.run_server(
+    #     port=8050,
+    #     host='0.0.0.0'
+    # )
+    from waitress import serve
+    import logging
+    logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
+    serve(app.server)
+    # app.run_server(debug=False)
