@@ -466,9 +466,9 @@ def update_fig_expectation(data, threshold, clickData, distanceToNoise, globalCo
             # Embed/compute colors
             positions, eigenvalues = uafourier.mds(corrMatrix, dimensions=2)
             np.save("positions.npy", positions)
-            plt.scatter(positions[0], positions[1])
-            plt.show()
             colors = uafourier.getColors(positions)
+            plt.scatter(positions[:,0], positions[:,1], c=colors)
+            plt.show()
             globalCorr = np.full((binaryData.shape[0], binaryData.shape[1], 4), 0.0)
             indices = np.argwhere(mask)
             globalCorr[indices[:,0], indices[:,1],3] = 1.0
